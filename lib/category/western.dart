@@ -10,6 +10,7 @@ class West extends StatefulWidget {
 }
 
 class _WESTState extends State<West> {
+  var favitem = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +40,29 @@ class _WESTState extends State<West> {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: Image(
-                        image: AssetImage('images/p2.jpg'),
-                        height: 310,
+                      child: Stack(
+                        children: [
+                          Image(
+                            image: AssetImage('images/p2.jpg'),
+                            height: 310,
+                          ),
+                          Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 150, top: 10),
+                              child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      favitem = !favitem;
+                                    });
+                                  },
+                                  icon: favitem
+                                      ? Icon(
+                                          Icons.favorite_outline_outlined,
+                                        )
+                                      : Icon(
+                                          Icons.favorite,
+                                        ))),
+                        ],
                       ),
                     ),
                     Text(
@@ -55,9 +76,29 @@ class _WESTState extends State<West> {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: Image(
-                        image: AssetImage('images/p3.jpg'),
-                        height: 310,
+                      child: Stack(
+                        children: [
+                          Image(
+                            image: AssetImage('images/p3.jpg'),
+                            height: 310,
+                          ),
+                          Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 150, top: 10),
+                              child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      favitem = !favitem;
+                                    });
+                                  },
+                                  icon: favitem
+                                      ? Icon(
+                                          Icons.favorite_outline_outlined,
+                                        )
+                                      : Icon(
+                                          Icons.favorite,
+                                        ))),
+                        ],
                       ),
                     ),
                     Text(
@@ -78,11 +119,21 @@ class _WESTState extends State<West> {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: Image(
-                        image: AssetImage('images/O1.png'),
-                        height: 310,
-                        width: 200,
-                        fit: BoxFit.cover,
+                      child: Stack(
+                        children: [
+                          Image(
+                            image: AssetImage('images/O1.png'),
+                            height: 310,
+                            width: 200,
+                            fit: BoxFit.cover,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 150, top: 10),
+                            child: Icon(
+                              Icons.favorite_outline_outlined,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Text(
@@ -96,9 +147,19 @@ class _WESTState extends State<West> {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(30),
-                      child: Image(
-                        image: AssetImage('images/02.png'),
-                        height: 310,
+                      child: Stack(
+                        children: [
+                          Image(
+                            image: AssetImage('images/02.png'),
+                            height: 310,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 150, top: 10),
+                            child: Icon(
+                              Icons.favorite_outline_outlined,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Text(

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:e_commerce_app/cart.dart';
 import 'package:e_commerce_app/home.dart';
 import 'package:e_commerce_app/prof.dart';
 import 'package:e_commerce_app/wish.dart';
@@ -14,7 +15,7 @@ class Navigat extends StatefulWidget {
 }
 
 class _NavigatState extends State<Navigat> {
-  List options = [Home(), Wishlist(), Profile(), Home()];
+  List options = [Home(), Wishlist(), Profile(), Bag()];
 
   int index = 0;
   void ontap(int ind) {
@@ -29,7 +30,7 @@ class _NavigatState extends State<Navigat> {
       body: options.elementAt(index),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem( 
+          BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
               backgroundColor: Colors.brown),
